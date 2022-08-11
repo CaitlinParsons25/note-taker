@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/CaitlinParsons25/note-taker/issues"
   },
-  "homepage": "https://github.com/CaitlinParsons25/note-taker#readme"
+  "homepage": "https://github.com/CaitlinParsons25/note-taker#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
 }
