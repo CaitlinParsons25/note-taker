@@ -1,6 +1,7 @@
 const fs = require('fs');
 const router = require('express').Router();
 const { notes } = require('../../db/db.json');
+const { findById, createNote, validateNote } = require('../../lib/notes');
 
 router.get('/notes', (req, res) => {
     let results = notes;
@@ -25,12 +26,6 @@ router.post('/notes', (req, res) => {
         const note = createNewAnimal(req.body, notes);
         res.json(note);
     }
-});
-
-router.delete('/notes/:id', (req, res) => {
-    const note = req.params.id
-    note = deleteNote(note, notes);
-    res.json(notes)
 });
 
 
